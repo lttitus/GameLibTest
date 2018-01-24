@@ -67,10 +67,12 @@ public class GameTest extends GUIGame {
 		});*/
 	}
 	
-	private int mcx, mcy;
+	//private int mcx, mcy;
+	
 	protected void logicUpdate() {
-		mcx = getMousePosition().width;
-		mcy = getMousePosition().height;
+		/*mcx = getMousePosition().x;
+		mcy = getMousePosition().y;*/
+		
 		/*if(mPressed) {
 			selector.changePoints(mpx, mpy, mcx-mpx, mcy-mpy);
 		}*/
@@ -85,7 +87,7 @@ public class GameTest extends GUIGame {
 		}
 		
 		counterFPS.update("FPS: "+fps);
-		mouseTracker.update("Mouse: "+mcx+", "+mcy, mcx, mcy);
+		mouseTracker.update("Mouse: "+mousePoint.x+", "+mousePoint.y, mousePoint.x, mousePoint.y);
 	}
 	
 	protected void mousePress() {
