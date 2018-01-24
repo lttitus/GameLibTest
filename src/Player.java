@@ -16,10 +16,9 @@ public class Player extends Sprite {
 
 	public void update() {
 		name.x = x;
-		name.y = y-10;
+		name.y = y-5;
 	}
 	
-	@Override
 	public void draw(Graphics g) {
 		super.draw(g);
 		name.draw(g);

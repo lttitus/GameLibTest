@@ -54,12 +54,6 @@ public class GameTest extends GUIGame {
 				text = "Mouse: "+x+", "+y;
 			}
 		});
-		addDrawable(new Text(Color.RED, "Player", player.x, player.y) {
-			public void update() {
-				x = player.x;
-				y = player.y-5;	//Offset above the head
-			}
-		});
 		addDrawable(new TimedText("This is a test", 0, h/2, 5) {
 			public void updateText() {
 				y--;
@@ -67,12 +61,7 @@ public class GameTest extends GUIGame {
 		});*/
 	}
 	
-	//private int mcx, mcy;
-	
 	protected void logicUpdate() {
-		/*mcx = getMousePosition().x;
-		mcy = getMousePosition().y;*/
-		
 		/*if(mPressed) {
 			selector.changePoints(mpx, mpy, mcx-mpx, mcy-mpy);
 		}*/
@@ -88,6 +77,7 @@ public class GameTest extends GUIGame {
 		
 		counterFPS.update("FPS: "+fps);
 		mouseTracker.update("Mouse: "+mousePoint.x+", "+mousePoint.y, mousePoint.x, mousePoint.y);
+		player.update();
 	}
 	
 	protected void mousePress() {
